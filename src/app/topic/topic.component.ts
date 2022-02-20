@@ -6,6 +6,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./topic.component.scss'],
 })
 export class TopicComponent {
+  panelOpenState = false;
+
   constructor() {}
 
   ngOnInit(): void {}

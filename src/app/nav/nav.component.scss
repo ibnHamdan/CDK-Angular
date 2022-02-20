@@ -16,6 +16,10 @@
   z-index: 1;
 }
 
-.top-toolbar button:last-child {
-  margin-right: auto;
+// .top-toolbar button:last-child {
+//   margin-right: auto;
+// }
+.top-toolbar-bottom {
+  display: flex;
+  justify-content: space-between;
 }

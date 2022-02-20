@@ -11,8 +11,9 @@ import { Direction, Directionality } from '@angular/cdk/bidi';
 })
 export class NavComponent {
   private isRtl: boolean;
+
   // private _dirChangeSubscription = Subscription.EMPTY;
-  public direction: Direction;
+  public direction: Direction = 'rtl';
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
@@ -25,7 +26,7 @@ export class NavComponent {
     private readonly dir: Directionality
   ) {
     this.isRtl = dir.value === 'rtl';
-    this.direction = dir.value;
+    //this.direction = dir.value;
     dir.change.subscribe(() => {
       this.changeInDirection();
     });

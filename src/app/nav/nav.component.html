@@ -5,35 +5,46 @@
     fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false"
+    [opened]="(isHandset$ | async) === true"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>القائمة</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">المواضيع</a>
+      <a mat-list-item href="#">الأعضاء والحضور</a>
+      <a mat-list-item href="#">المحضر </a>
+      <a mat-list-item href="#">المصادقة </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="top-toolbar" color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>ماتيريال</span>
+      <mat-toolbar-row>
+        <span>المجلس الأول</span>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="top-toolbar-bottom">
+        <div class="top-toolbar-title">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+          >
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span>الجلسة الأولى</span>
+        </div>
+        <div class="top-toolbar-actions">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="flipDirection()"
+          >
+            <mat-icon aria-label="Side nav toggle icon">language</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar-row>
+
       <!-- <p>Current direction is: {{ direction }}!</p> -->
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="flipDirection()"
-      >
-        <mat-icon aria-label="Side nav toggle icon">language</mat-icon>
-      </button>
     </mat-toolbar>
     <app-dashboard></app-dashboard>
   </mat-sidenav-content>

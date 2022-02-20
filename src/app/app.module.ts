@@ -19,6 +19,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BidiModule } from '@angular/cdk/bidi';
 import { TopicComponent } from './topic/topic.component';
+import { TopicsTableComponent } from './topics-table/topics-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,7 @@ import { TopicComponent } from './topic/topic.component';
     DashboardComponent,
     NavComponent,
     TopicComponent,
+    TopicsTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +47,9 @@ import { TopicComponent } from './topic/topic.component';
     MatSidenavModule,
     MatListModule,
     MatExpansionModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
